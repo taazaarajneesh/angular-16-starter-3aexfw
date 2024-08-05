@@ -1,0 +1,46 @@
+<div class="scheduler-container">
+  <div class="left-panel">
+    <div class="mini-calendar-container">
+      <div #miniCalendar></div>
+    </div>
+    <div class="filter-section">
+      <h3>My calendars</h3>
+      <div>
+        <label>
+          <input type="checkbox" [(ngModel)]="showImportant" (change)="applyFilters()">
+          Important Events
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" [(ngModel)]="selectedCategory" (change)="applyFilters()" [value]="'work'">
+          Work
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" [(ngModel)]="selectedCategory" (change)="applyFilters()" [value]="'personal'">
+          Personal
+        </label>
+      </div>
+      <div>
+        <a href="#">Show all</a>
+      </div>
+    </div>
+  </div>
+	<div class="main-calendar">
+		<full-calendar #calendar [options]="calendarOptions"></full-calendar>
+	</div>
+	<div class="right-panel">
+		<h3>Events for {{ selectedDate() }}</h3>
+		<ul>
+			<li *ngFor="let event of selectedDateEvents()">
+				{{ event.title }}
+				<ng-container *ngIf="event.extendedProps as props">
+					<span *ngIf="props.important">(Important)</span>
+					<span *ngIf="props.category">({{ props.category }})</span>
+				</ng-container>
+			</li>
+		</ul>
+	</div>
+</div>

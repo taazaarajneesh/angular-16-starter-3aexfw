@@ -1,0 +1,80 @@
+.scheduler-container {
+  display: flex;
+  height: 100%;
+}
+
+.left-panel {
+  width: 250px;
+  padding: 10px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.main-calendar {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.mini-calendar-container {
+  margin-bottom: 20px;
+}
+
+.mini-calendar-container .fc {
+  font-size: 0.7em;
+}
+
+.mini-calendar-container .fc .fc-toolbar-title {
+  font-size: 1em;
+}
+
+.mini-calendar-container .fc .fc-button {
+  padding: 0.2em 0.4em;
+}
+
+.mini-calendar-container .fc .fc-col-header-cell-cushion,
+.mini-calendar-container .fc .fc-daygrid-day-number {
+  text-decoration: none;
+}
+
+.mini-calendar-container .fc .fc-daygrid-day-top {
+  justify-content: center;
+}
+
+.mini-calendar-container .fc .fc-daygrid-day-number {
+  float: none;
+  padding: 2px;
+}
+
+.mini-calendar-container .fc .fc-day-other .fc-daygrid-day-top {
+  opacity: 0.3;
+}
+
+.filter-section {
+  margin-top: 20px;
+}
+
+.filter-section h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.filter-section div {
+  margin-bottom: 5px;
+}
+
+.filter-section label {
+  display: flex;
+  align-items: center;
+}
+
+.filter-section input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.filter-section a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+.filter-section a:hover {
+  text-decoration: underline;
+}
